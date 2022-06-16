@@ -26,6 +26,7 @@ export function Navigation() {
         <BottomNavigationAction label="main" value="/main" />
         <BottomNavigationAction label="sub" value="/sub" />
         <BottomNavigationAction label="pokemon" value="/pokemon" />
+        <BottomNavigationAction label="readOnlyPokemon" value="/ro" />
       </BottomNavigation>
     </Paper>
   );

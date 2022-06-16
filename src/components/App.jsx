@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './layout';
 import Navigation from './Navigation';
 import { Main } from '../features/main/main';
-import { PokemonList } from '../features/pokemon/pokemon';
+import { PokemonList, ReadOnlyPokemon } from '../features/pokemon/pokemon';
 
 const Sub = () => {
   return (
@@ -21,6 +21,7 @@ export default function App() {
         <Route path="main" element={<Main />} />
         <Route path="sub" element={<Sub />} />
         <Route path="pokemon" element={<PokemonList />} />
+        <Route path="ro" element={<ReadOnlyPokemon />} />
       </Route>
     </Routes>
   );

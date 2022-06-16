@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPokemonByName } from './pokemonSlice';
 import { Card, CardContent, FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material';
+import Navigation from '../../components/Navigation';
 
 const Pokemon = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,12 @@ const Pokemon = () => {
 
 const ReadOnlyPokemon = () => {
   const { name, img } = useSelector((state) => state.pokemon);
-  return <img src={img} alt={name} />;
+  return (
+    <React.Fragment>
+      <img src={img} alt={name} />
+      <Navigation />
+    </React.Fragment>
+  );
 };
 
 const PokemonList = () => {
